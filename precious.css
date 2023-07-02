@@ -36,6 +36,8 @@ body {
 
 .grid-container2 {
   display: grid;
+  width: 100%;
+  max-width: auto;
   grid-template-columns: 1fr;
   background: palevioletred;
   text-align: center;
@@ -46,7 +48,9 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  max-width: auto;
+  grid-template-columns: repeat(auto, 5, 1fr);
   grid-gap: 5px;
   background: palevioletred;
   text-align: center;

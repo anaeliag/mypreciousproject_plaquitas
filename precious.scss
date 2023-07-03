@@ -1,6 +1,10 @@
+@import 'variables';
+
 body {
     /*background-color:lightpink;*/
+    width: $width;
     height: 100vh;
+    width: auto;
     background-image: url(assets/images/fondo_rosa.jpg);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -34,10 +38,28 @@ body {
     cursor: pointer;
 }
 
-.grid-container2 {
+/*.grid-container2 {
     display: grid;
-    width: 100%;
     max-width: auto;
+    grid-template-columns: 1fr;
+    background: palevioletred;
+    text-align: center;
+    border: plum 5px solid;
+    font-style: italic;
+    font-size: large;
+}
+.grid-container {
+    display: grid;
+    max-width: auto;
+    grid-template-columns: repeat(auto, 5, 1fr);
+    grid-gap: 5px;
+    background: palevioletred;
+    text-align: center;
+    border: plum 5px solid;
+  }*/
+
+  .grid-container2 {
+    display: grid;
     grid-template-columns: 1fr;
     background: palevioletred;
     text-align: center;
@@ -48,14 +70,15 @@ body {
 
 .grid-container {
     display: grid;
-    width: 100%;
-    max-width: auto;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
     grid-template-columns: repeat(auto, 5, 1fr);
     grid-gap: 5px;
     background: palevioletred;
     text-align: center;
     border: plum 5px solid;
   }
+
+
 
 .grid-item1{
     border-style: double;
@@ -86,5 +109,9 @@ body {
 form {
     background: palevioletred;
     border: plum 5px solid;
+}
+
+.container-fluid {
+    width: $width;
 }
 

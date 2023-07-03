@@ -1,13 +1,15 @@
-@import 'precious';
 
-#galeria {
+/*#galeria {
     width: 1023px;
     background-color: aquamarine;
-}
+}*/
+
+@import 'variables';
 
 body {
     /*background-color:lightpink;*/
-    width: 1023px;
+    /*width: 1023px;*/
+    width: $width;
     height: 100vh;
     background-image: url(assets/images/fondo_rosa.jpg);
     grid-template-columns: 1fr 1fr;

@@ -1,11 +1,11 @@
-#carouselExampleInterval {
+/*#carouselExampleInterval {
     width: 719px;
     background-color: aquamarine;
-}
+}*/
 
 body {
     /*background-color:lightpink;*/
-    width: 719px;
+    /*width: 719px;*/
     height: 100vh;
     background-image: url(assets/images/fondo_rosa.jpg);
     grid-template-columns: 1fr 1fr;

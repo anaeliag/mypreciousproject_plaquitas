@@ -3,7 +3,7 @@
 body {
     margin: 0;
     /*background-color:lightpink;*/
-    width: 100%;
+    width: $width;
     height: 100vh;
     /*background-image: url(assets/images/fondo_rosa.jpg);*/
     /*grid-template-columns: 1fr 1fr;
@@ -86,7 +86,7 @@ body {
 
 .grid-item4{
     border-style: double;
-    border: plum 5px solid;
+    border: $background-color 5px solid;
 }
 
 .grid-item5{
@@ -112,6 +112,7 @@ form {
     display: flex; 
     flex-direction:row;
     column-gap: 23px;
+    justify-content: center;
 }
 
 .column {

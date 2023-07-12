@@ -81,7 +81,7 @@ body {
 
 .grid-item4 {
   border-style: double;
-  border: plum 5px solid;
+  border: yellow 5px solid;
 }
 
 .grid-item5 {
@@ -106,6 +106,7 @@ form {
     display: flex; 
     flex-direction:row;
     column-gap: 23px;
+    justify-content: center;
 }
 
 .column {

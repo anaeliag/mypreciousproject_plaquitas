@@ -39,6 +39,16 @@ body {
 .grid-container2 {
   display: grid;
   grid-template-columns: 1fr;
+  background: peachpuff;
+  text-align: center;
+  border: plum 5px solid;
+  font-style: italic;
+  font-size: large;
+}
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: 1fr;
   background: palevioletred;
   text-align: center;
   border: plum 5px solid;
@@ -46,10 +56,11 @@ body {
   font-size: large;
 }
 
+
 .grid-container {
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
   grid-gap: 5px;
   background: palevioletred;
@@ -81,10 +92,23 @@ body {
 
 .grid-item4 {
   border-style: double;
-  border: yellow 5px solid;
+  border: plum 5px solid;
 }
 
 .grid-item5 {
+  display: grid;
+  border-style: double;
+  border: plum 5px solid;
+}
+
+.grid-item6 {
+  display: grid;
+  border-style: double;
+  border: plum 5px solid;
+}
+
+.grid-item8 {
+  display: grid;
   border-style: double;
   border: plum 5px solid;
 }

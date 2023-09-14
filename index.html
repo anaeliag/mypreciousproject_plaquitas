@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreciousSite</title>
     <link rel="stylesheet" href="precious.css">
+    <script src="productos.js" defer></script>
+    <script src="usuarios.js" defer></script>
+    <script src="carritodecompras.js" defer></script>
+    <script src="main.js" defer></script>
+    <!--script src="login.js" defer></script>
+    <script src="bd.js" defer></script-->
     <!--link rel="stylesheet" href="tablets.css" media="screen and (min-width: 720px) and (max-width: 1023px)">
     <link rel="stylesheet" href="nextmedia.css" media="screen and (min-width: 1024px) and (max-width: 1199px)">
     <link rel="stylesheet" href="finalmedia.css" media="screen and (min-width: 1200px)"-->
@@ -15,8 +21,11 @@
   <!--navbar-->
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="assets/images/logo_company.jpg" width="200px" height="200px" alt="company">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Grabados para tu mejor amigo</a>
+      <a class="navbar-brand" href="#">
+        Plaquitas para tu mejor amigo
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,35 +36,49 @@
               Nuestros productos
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="plaquitas.html">Plaquitas para tu mejor amigo</a></li>
-              <li><a class="dropdown-item" href="joyasgrabadas.html">Medallas y pulseras grabadas para ese alguien especial</a></li>
+              <li><a class="dropdown-item" href="plaquitas.html">Plaquitas</a></li>
               <li><a class="dropdown-item" href="#">Collares con plaquita grabada</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-    <a class="btn btn-primary" href="signin.html" role="button">Login</a>
+    <button id="lascompras" type="button" class="btn btn-primary btn-lg">Tu Carrito de Compras</button>
+    <section id="areaMensajes"></section>
+    <!--a class="btn btn-primary" href="signin.html" role="button">Login</a-->
   </nav>
 
 <!--grid-->
 
 <div class="grid-container2">
-  <div class="grid-item6"><h5> 5 razones para adoptar una mascota</h5></div>
+  <div class="grid-item6"><h5> Somos un sitio preocupado por la seguridad y bienestar de tu mejor amigo de 4 patas, por lo que te brindaremos muchas opciones para que identifiques a tu mejor amigo y evitar que se extravie, ademas te proporcionares noticias e informacion para su bienestar.</h5></div>
+</div>
+
+<div class="grid-container3">
+  <div class="grid-item7"><h5> ¿Por qué son importantes las placas personalizadas para perro?</h5></div>
+  <div class="grid-item8"><h6> ¿Al adoptar a un perro te hablan sobre la importancia de colocarle siempre un collar con placa. Sin embargo, que tu can porte su identificación en todo momento no es únicamente en caso de que sea adoptado, si no que es esencial para cualquier mascota que sea parte de la familia.
+    
+      Aunque pueda parecer incómodo para ellos traerla, deben portar la placa con su nombre y tus datos de contacto en todo momento (incluso dentro de la casa). Lo bueno es que ahora hay diferentes opciones para colocar la información en placas —como códigos QR o collares con identificadores incluidos—; encuentra la alternativa que le sea más cómoda a tu amigo de cuatro patas.
+      
+      Nunca sabes cuando tu perro pueda salir de casa y perderse o bien distraerse mientras pasean y olvide cómo regresar a ti. Ten en cuenta los beneficios de ponerle un collar con sus datos de identificación.</h6></div>
+  </div>
 </div>
 
 <div class="grid-container">
-  <div class="grid-item1">1. Estás salvando una vida
+  <!--div class="grid-item1">Estás salvando una vida
     ¡Si adoptas una mascota de un refugio, no estás salvando solo una vida. ¡Estás salvando dos! Probablemente estás pensando: ¿cuál es la segunda? La de la otra mascota que tomará el lugar de tu nuevo amigo de cuatro patas y tendrá una segunda oportunidad de una vida feliz y de amar a una familia de nuevo. Los refugios para animales suelen estar abarrotados y no tienen suficiente espacio para alojar a un animal y darle la comodidad que necesita. Por lo tanto, adoptar una mascota significa que estás haciendo un cambio al apoyar a una valiosa organización benéfica y luchar contra la superpoblación. Salvar la vida de un animal a menudo resulta ser salvar tu propia vida también. ¿Quién rescató a quién?
-    </div>
-  <div class="grid-item2">2. Amor incondicional
-    El beneficio número uno y obvio de convertirse en padre de una mascota es el amor incondicional y la compañía de por vida. La afortunada mascota a la que has decidido dar un hogar para siempre, no dudará en mostrate su gratitud en todo momento con todo su afecto. ¡Prepárate para un sinfín de abrazos y besos! Nunca olvidarán el sentimiento de ese momento en el que tus ojos se encontraron con los suyos y decidiste darles la oportunidad de amar a una familia de nuevo. La vida nunca será aburrida con tu amigo peludo a tu lado. ¡La mejor compañía todos los días!</div>
-  <div class="grid-item3">3. Mejorar su salud mental
-    La mayoría de los padres de mascotas tienen claras las alegrías que conlleva compartir sus vidas con un amigo peludo, pero las mascotas también aportan beneficios poderosos para la salud. Un perro o un gato feliz puede mejorar tu estado de ánimo y ayudar a tu salud mental en general, incluyendo la depresión, la soledad, el estrés y la ansiedad. Con solo acariciarlas o cogerlas en brazos, puedes reducir la presión arterial y los niveles de estrés. No sólo pueden ayudarte mentalmente, sino también a tu salud física porque te dan la oportunidad de mantenerte activo todos los días. Muchos paseos, tiempo de juego y la oportunidad de conocer a otros padres de mascotas! Mascota feliz, vida feliz</div>
-  <div class="grid-item4">4. Muy positivo para tus hijos
-    ¡Tener una mascota es un regalo para todos, especialmente para los niños! Crecer con una mascota les ayuda a desarrollarse mental y físicamente. Puede enseñarles valiosas lecciones de vida como la responsabilidad, la confianza, la compasión, el respeto y la paciencia. Las tareas sencillas que implican el cuidado de la mascota, como pasear al perro o alimentar al gato, les ayudarán a desarrollar la empatía por los demás. El impacto positivo va en ambos sentidos - tanto los niños como las mascotas disfrutan de actividades de alta energía así como de la hora de la siesta. Y lo más importante, ¡es divertido! Mucho tiempo de juego que fomentará un estilo de vida saludable para tus hijos.</div>
-  <div class="grid-item5">5. Animas a otros a adoptar
-    Si tienes un mejor amigo peludo al que quieres y consideras propio, ya conoces las razones que te hemos mencionado anteriormente. Pero hay otra razón muy importante para adoptar una mascota: ¡estás animando a otros a adoptar también! Cuando tus amigos te pregunten dónde conseguiste a tu nuevo mejor amigo, puedes contarles todo el proceso y verán lo feliz que eres con tu nuevo miembro de la familia. Con suerte, decidirán hacer lo mismo cuando sea el momento adecuado para ampliar su familia.</div>
+  </div-->
+  
+  <div class="grid-item2">Indican que tiene un hogar
+    Cuando ves un perro con collar y placa caminando solo por la calle no hay duda de que tiene un lugar al cual regresar. Esto hace que tu perro no pase desapercibido, por lo que seguro alguien lo podrá ayudar.</div>
+  <div class="grid-item3">Contienen datos del perro
+    Si alguna persona encuentra a tu perrito y quiere ayudarlo a regresar a casa, le es más fácil hacerlo cuando conoce su nombre. De esta manera el can también escuchará algo familiar y se resistirá menos a recibir apoyo.</div>
+  <div class="grid-item4">Tienen un contacto
+    Después de que alguien encontró a tu lomito perdido, necesitan una manera de contactarte para que regrese a ti. Es imprescindible colocar tu número de celular, opcional podrías poner tu nombre, correo electrónico o dirección. Varias personas evitan colocar su dirección por cuestiones de seguridad.
+    
+    Sé responsable con tus mascotas y permite que regresen sanos a casa lo más pronto posible. Si ya cuentas con su placa, pero aún no tienes un collar, checa las opciones de collares para perro que tenemos en <li><a class="dropdown-item" href="plaquitas.html">Plaquitas para tu mejor amigo</a></li></div>
+  <!--div class="grid-item5">5. Animas a otros a adoptar
+    Si tienes un mejor amigo peludo al que quieres y consideras propio, ya conoces las razones que te hemos mencionado anteriormente. Pero hay otra razón muy importante para adoptar una mascota: ¡estás animando a otros a adoptar también! Cuando tus amigos te pregunten dónde conseguiste a tu nuevo mejor amigo, puedes contarles todo el proceso y verán lo feliz que eres con tu nuevo miembro de la familia. Con suerte, decidirán hacer lo mismo cuando sea el momento adecuado para ampliar su familia.</div-->
 </div>
 
 <!--assets/images/plaquitas_example.jpg-->
@@ -68,10 +91,10 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="3000">
-        <img src="assets/images/WhatsApp Image 2023-06-20 at 21.39.55.jpeg" class="d-block w-100" width="400" height="700px" alt="plaq1">
+        <img src="assets/images/plaquitaspicta.png" class="d-block w-100" width="400" height="700px" alt="plaq1">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Beneficios de utilizar una placa de identificación.</h5>
-          <p>Fuente de información e identificación: la placa de identificación nos permite colocar información puntual sobre la mascota y de su dueño, siendo unos de los datos más importantes, el nombre del animal, nuestro número de contacto y dirección.</p>
+          <h5>Tradicional</h5>
+          <p>Varias modelos</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="3000">
@@ -109,26 +132,24 @@
     <h2 class="accordion-header">
       
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Plaquitas
+        Parques Caninos
       </button>
     </h2>
+    
     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Un elemento fundamental y que nunca debe faltarle a nuestras mascotas, es la placa de identificación. Muchos no le dan la importancia que merece, desestimando su uso y efectividad, en especial porque creen erróneamente que al tener un microchip, el animal ya no necesitará de ningún otro tipo de identificación de seguridad. Pero este es un grave error, ya que el microchip no posee las mismas funciones de una placa, y por desgracia, la dificultad para acceder a su información, imposibilita su uso para cualquier persona común. Es por esto que aun en nuestros días, el uso de la placa no ha desaparecido, pues solamente con los datos precisos, puede permitirnos salvar la vida de nuestras mascotas.
-
-        No es raro encontrarnos a diario perros o gatos extraviados, que a falta de una identificación externa, nunca consiguen volver a su hogar. Este es un hecho que se repite constantemente en todo el mundo, ya sea por irresponsabilidad, un descuido o un suceso que sobrepasa nuestro control, como podría ser el caso de un robo o de una catástrofe natural. Cuando un animal desaparece, el que consiga volver a casa depende en gran medida de la acción de la gente a su alrededor, por más raro que pueda sonar.
-        
-        Los esfuerzos de los dueños muchas veces se quedan cortos ante la amplitud de escenarios existentes, por lo que la ayuda de otras personas se vuelve crucial en estos momentos. Pero lamentablemente, sin un objeto que facilite la obtención e intercambio de información, esa ayuda nunca llegará. Son estos detalles lo que convierten a <code>la placa de identificación,</code>en un elemento de incalculable valor para nosotros.
-        <img src="assets/images/WhatsApp Image 2023-06-20 at 21.39.55.jpeg" class="d-block w-100" width="400" height="700px" alt="plaq1">
+      <div class="accordion-body">El Metro Can, el parque canino más grande de México abrió sus puertas este domingo en el Parque Metropolitano con una extensión de 2.5 hectáreas y con diversas áreas dedicadas para el convivió familiar y de mascotas.
+       <code><li><a class="dropdown-item" href="https://www.milenio.com/estados/abren-metro-can-en-parque-metropolitano">Parque canino</a></li></code>
+        <img src="assets/images/metrocan.jpeg" class="d-block w-100" width="400" height="700px" alt="plaq1">
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Medallas grabadas
+        Notas de animalitos
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+      <div class="accordion-body">¿Has notado que tus animales de compañía se comportan diferente? Si tu perro o gato tienen conductas “extrañas” como lamerse demasiado, corretearse la cola (cuando ya no son cachorros) o cazar cosas inexistentes debes poner atención pues podría ser depresión. <code><li><a class="dropdown-item" href="https://www.elsoldemexico.com.mx/doble-via/depresion-en-mascotas-cuales-son-los-sintomas-10607933.html">Sintomas de depresion en mascotas</a></li></code></div>
     </div>
   </div>
   <div class="accordion-item">

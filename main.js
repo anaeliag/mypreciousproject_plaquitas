@@ -166,7 +166,7 @@ function compra(){
 }//close function
 
 function compradeusuariologueado(){
-            let mensajebienvenida = prompt("Bienvenida/o, "+usuario+ " ¿Quieres elegir una plaquita?");
+            let mensajebienvenida = prompt("Bienvenida/o, "+usuario+ " ¿Quieres elegir una plaquita? (Responde si o no)");
             if (mensajebienvenida === "si") {
                 plaquita = prompt(`Que forma quieres que tenga tu plaquita (Elige el numero de la figura de la siguiente forma (ejemplo: 1, 2 3 etc)));
                 1) Redonda
@@ -242,6 +242,10 @@ function compradeusuariologueado(){
                 console.log(BD[i].productos);
                 alert(BD[i].nombre);
                 alert(BD[i].productos);
+                let comprasi = prompt("Quieres proceder a hacer tu pago? (Responde si o no)");
+                if (comprasi == "si"){
+                    alert("El costo de tu plaquita es de $200.00 pesos MXN")
+                }
             /*console.log(BD[i].productos.push([plaquita,nombredeperrito,numerodetelefono,colordeplaquita]));
             console.log(productoyuser);*///close if user    //close for 
 }//close function

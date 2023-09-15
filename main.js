@@ -69,6 +69,11 @@ function validarnumeros (input_str) {
         var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
         return re.test(input_str);
       }
+      
+function validartarjeta (input_str) {
+        var re = /^\(?(\d{4})\)?[- ]?(\d{4})[- ]?(\d{4})[- ]?(\d{4})$/;
+        return re.test(input_str);
+      }
 
 function telefono(numerodetelefono) {
     const pattern = new RegExp("^\\[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{4}$");
@@ -245,6 +250,38 @@ function compradeusuariologueado(){
                 let comprasi = prompt("Quieres proceder a hacer tu pago? (Responde si o no)");
                 if (comprasi == "si"){
                     alert("El costo de tu plaquita es de $200.00 pesos MXN")
+                    let pago = prompt(`Puedes pagar con Paypal o Mercado Pago, ¿Que opcion eliges? (Elige el numero de la figura de la siguiente forma (ejemplo: 1 o 2,. etc)));
+                1) Paypal
+                2) Mercado Pago
+                3) Salir`);
+                if (Number(pago) == 1){
+                    console.log("Elegiste: "+pago+" - Paypal");
+                    let correo = prompt("Ingresa tu correo electronico)");
+                    if (correo.includes(@hotmail.com) || correo.includes(@gmail.com)) {
+                        alert("Tu pago a sido aplicado a tu cuenta: "+correo+" , gracias por tu compra!");
+                        return;
+                    } else {
+                        alert("Correo no valido, vuelve a inetntarlo");
+                        compra();
+                    }
+                } else if (Number(pago) == 2) {
+                    console.log("Elegiste: "+pago+" - Mercado Pago");
+                    let cuenta = prompt("Ingresa tu numero de cuenta del siguiente modo (xxxx-xxxx-xxxx-xxxx)");
+                    if (validartarjeta(cuenta)) {
+                        console.log("Numero de tarjeta valido: "+cuenta);
+                        alert("Tu pago a sido aplicado a tu cuenta, gracias por tu compra!");
+                        return;
+                        //return true;
+                    } else {
+                        console.log("Tarjeta invalida, vuelve a intentarlo");
+                        compra()
+                    }
+                } else if (Number(pago) == 3) {
+                    return;
+                } else {
+                    console.log("Esa opcion no es valida, por favor vuelve a intentarlo");
+                login();
+                }
                 }
             /*console.log(BD[i].productos.push([plaquita,nombredeperrito,numerodetelefono,colordeplaquita]));
             console.log(productoyuser);*///close if user    //close for 

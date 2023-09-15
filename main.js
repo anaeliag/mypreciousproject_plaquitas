@@ -245,8 +245,6 @@ function compradeusuariologueado(){
                 BD[i].productos.push(plaquita,numerodetelefono,nombredeperrito,colordeplaquita);
                 console.log(BD[i].nombre);
                 console.log(BD[i].productos);
-                alert(BD[i].nombre);
-                alert(BD[i].productos);
                 let comprasi = prompt("Quieres proceder a hacer tu pago? (Responde si o no)");
                 if (comprasi == "si"){
                     alert("El costo de tu plaquita es de $200.00 pesos MXN")
@@ -257,7 +255,7 @@ function compradeusuariologueado(){
                 if (Number(pago) == 1){
                     console.log("Elegiste: "+pago+" - Paypal");
                     let correo = prompt("Ingresa tu correo electronico)");
-                    if (correo.includes(@hotmail.com) || correo.includes(@gmail.com)) {
+                    if (correo.includes("@hotmail.com") || correo.includes("@gmail.com")) {
                         alert("Tu pago a sido aplicado a tu cuenta: "+correo+" , gracias por tu compra!");
                         return;
                     } else {

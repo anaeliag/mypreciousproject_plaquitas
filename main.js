@@ -25,17 +25,18 @@ const BD = [
     }
 ]
 
-
+let usuario = "null" 
 function login() {
     let registradoono = prompt("Ya tienes cuenta con nosotros? (Responde si o no)");
     if (registradoono === "si") {
-        const usuario = prompt("cual es tu usuario? ");
+        usuario = prompt("cual es tu usuario? ");
         const contrasena = prompt("cual es tu contrasena? ");
         for (i=0;i<BD.length;i++){
             if (usuario === BD[i].usuario && contrasena === BD[i].contrasena){
                 //construyePerfil()
-                alert(document.getElementById("areaMensajes").innerText = "Bienvenido "+usuario+", estaremos contentos de servirte");
+                alert(document.getElementById("areaMensajes").innerText = "Bienvenido "+usuario);
                 console.log("Bienvenida/o "+usuario+", estaremos contentos de servirte");
+                document.getElementById("lascompras").addEventListener("click", compradeusuariologueado);
                 break
             } else if (Number(BD.length)-1 === i){
                 console.log("usuario o contraseña incorrectas");
@@ -164,10 +165,98 @@ function compra(){
     }  //close for 
 }//close function
 
+function compradeusuariologueado(){
+            let mensajebienvenida = prompt("Bienvenida/o, "+usuario+ " ¿Quieres elegir una plaquita?");
+            if (mensajebienvenida === "si") {
+                plaquita = prompt(`Que forma quieres que tenga tu plaquita (Elige el numero de la figura de la siguiente forma (ejemplo: 1, 2 3 etc)));
+                1) Redonda
+                2) Corazon
+                3) Cuadrada
+                4) Rectangular
+                5) Forma de patita
+                6) Salir`);
+               
+                    if (Number(plaquita) == 1){
+                        console.log("Elegiste la forma: "+plaquita+" - Redonda");
+                    } else if (Number(plaquita) == 2) {
+                        console.log("Elegiste la forma: "+plaquita+" - Corazon");
+                    } else if (Number(plaquita) == 3) {
+                        console.log("Elegiste la forma: "+plaquita+" - Cuadrada");
+                    } else if (Number(plaquita) == 4) {
+                        console.log("Elegiste la forma: "+plaquita+" - Rectangular");
+                    } else if (Number(plaquita) == 5) {
+                        console.log("Elegiste la forma: "+plaquita+" - Patita");
+                    } else if (Number(plaquita) == 6) {
+                        return
+                    } else {
+                        console.log("Esa opcion no es valida, por favor vuelve a loguearte");
+                        login();
+                    }
+            } else {
+                    console.log("Ok, puedes elegir mas productos");
+                    login();
+            }
+            let nombredeperrito = prompt("Cual es en nombre de tu peludito?");
+            console.log(typeof nombredeperrito)
+            console.log(nombredeperrito)
+            if (typeof nombredeperrito == 'string') {
+                console.log("El nombre de tu peludito es: "+nombredeperrito);
+            } else {
+                console.log("Esa opcion no es valida, por favor vuelve a loguearte");  
+                return;              
+            }
+            let numerodetelefono = prompt("Cual es el numero de telefono que quieres agregar a la plaquita?(Ejemplo: 331-145-7698)");
+            if (validarnumeros(numerodetelefono)) {
+                console.log("Numero de telefono es valido: "+numerodetelefono);
+                //return true;
+            } else {
+                console.log("Numero invalido");
+                compra()
+            }
+        //}//??
+            const colordeplaquita = prompt(`Que color de plaquita quieres elegir (ejemplo: 1, 2 3 etc)));
+                1) Rosa
+                2) verde
+                3) Amarilla
+                4) Azul
+                5) Negro
+                6) Salir`);
+                if (Number(colordeplaquita) == 1){
+                    console.log("Elegiste el color: "+colordeplaquita+" - Rosa");
+                } else if (Number(colordeplaquita) == 2) {
+                    console.log("Elegiste el color: "+colordeplaquita+" - Verde");
+                } else if (Number(colordeplaquita) == 3) {
+                    console.log("Elegiste el color: "+colordeplaquita+" - Amarillo");
+                } else if (Number(colordeplaquita) == 4) {
+                    console.log("Elegiste el color: "+colordeplaquita+" - Azul");
+                } else if (Number(colordeplaquita) == 5) {
+                    console.log("Elegiste el concierto: "+colordeplaquita+" - Negro");
+                } else if (Number(colordeplaquita) == 6) {
+                    return;
+                } else {
+                    console.log("Esa opcion no es valida, por favor vuelve a loguearte");
+                login();
+                }
+                BD[i].productos.push(plaquita,numerodetelefono,nombredeperrito,colordeplaquita);
+                console.log(BD[i].nombre);
+                console.log(BD[i].productos);
+                alert(BD[i].nombre);
+                alert(BD[i].productos);
+            /*console.log(BD[i].productos.push([plaquita,nombredeperrito,numerodetelefono,colordeplaquita]));
+            console.log(productoyuser);*///close if user    //close for 
+}//close function
+
+
 
 document.body.onload = login()
 
-document.getElementById("lascompras").addEventListener("click", compra); //nodo
+/*if (logged){
+    document.getElementById("lascompras").addEventListener("click", compradeusuariologueado(usuario)); //nodo
+    console.log("ya entre")
+} else {
+    document.getElementById("lascompras").addEventListener("click", compra); //nodo
+}*/
+
 
 
 

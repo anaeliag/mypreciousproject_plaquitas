@@ -250,25 +250,36 @@ function compradeusuariologueado(){
                     alert("El costo de tu plaquita es de $200.00 pesos MXN")
                     let pago = prompt(`Puedes pagar con Paypal o Mercado Pago, ¿Que opcion eliges? (Elige el numero de la figura de la siguiente forma (ejemplo: 1 o 2,. etc)));
                 1) Paypal
-                2) Mercado Pago
+                2) Tarjeta de Debito o Credito
                 3) Salir`);
                 if (Number(pago) == 1){
                     console.log("Elegiste: "+pago+" - Paypal");
                     let correo = prompt("Ingresa tu correo electronico)");
                     if (correo.includes("@hotmail.com") || correo.includes("@gmail.com")) {
-                        alert("Tu pago a sido aplicado a tu cuenta: "+correo+" , gracias por tu compra!");
-                        return;
+                        let direccion = prompt("Ingresa tu direccion (Avenida siempre viva #45, Springfield)");
+                        if (direccion != null) {
+                            alert("Tu pago a sido aplicado a tu cuenta: "+correo+" y te enviaremos tu plaquita a la direccion proporcionada, gracias por tu compra!");
+                            return;
+                        } else {
+                            alert("Direccion invalida, vuelve a intentarlo");
+                            return;
+                        }
                     } else {
                         alert("Correo no valido, vuelve a inetntarlo");
-                        compra();
+                        return;
                     }
                 } else if (Number(pago) == 2) {
-                    console.log("Elegiste: "+pago+" - Mercado Pago");
-                    let cuenta = prompt("Ingresa tu numero de cuenta del siguiente modo (xxxx-xxxx-xxxx-xxxx)");
+                    console.log("Elegiste: "+pago+" - Tarjeta de Debito o Credito");
+                    let cuenta = prompt("Ingresa tu numero de tarjeta del siguiente modo (xxxx-xxxx-xxxx-xxxx)");
                     if (validartarjeta(cuenta)) {
-                        console.log("Numero de tarjeta valido: "+cuenta);
-                        alert("Tu pago a sido aplicado a tu cuenta, gracias por tu compra!");
-                        return;
+                        let direccion = prompt("Ingresa tu direccion (Avenida siempre viva #45, Springfield)");
+                        if (direccion != null) {
+                            console.log("Numero de tarjeta valido: "+cuenta);
+                            alert("Tu pago a sido aplicado a tu cuenta y te enviaremos tu plaquita a la direccion proporcionada, gracias por tu compra!");
+                            return;
+                        } else {
+                            alert("Direccion invalida, vuelve a intentarlo");
+                            return;
                         //return true;
                     } else {
                         console.log("Tarjeta invalida, vuelve a intentarlo");

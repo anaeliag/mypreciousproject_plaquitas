@@ -1,3 +1,5 @@
+//document.getElementById("menuproductos").addEventListener("mouseover",necesitasayuda);
+
 let usuario = "null" 
 function login() {
     let registradoono = prompt("Ya tienes cuenta con nosotros? (Responde si o no)");
@@ -41,14 +43,14 @@ function login() {
     document.getElementById("perfilUsuario").appendChild(profile);
   }*/
 
-function validarnumeros (input_str) {
+function validarnumeros (ntelefono) {
         var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-        return re.test(input_str);
+        return re.test(ntelefono);
       }
       
-function validartarjeta (input_str) {
+function validartarjeta (ntarjeta) {
         var re = /^\(?(\d{4})\)?[- ]?(\d{4})[- ]?(\d{4})[- ]?(\d{4})$/;
-        return re.test(input_str);
+        return re.test(ntarjeta);
       }
 
 /*function telefono(numerodetelefono) {
@@ -63,7 +65,7 @@ function validartarjeta (input_str) {
     }
 }*/
 
-function compra(){
+/*function compra(){
     let dimetuuser = prompt("Cual es tu usuario?");
     var plaquita="nulo";
     for (i=0;i<BD.length;i++){
@@ -135,16 +137,16 @@ function compra(){
                 console.log(BD[i]);
             /*console.log(BD[i].productos.push([plaquita,nombredeperrito,numerodetelefono,colordeplaquita]));
             console.log(productoyuser);*/
-        } else if (Number(BD.length)-1 === i){
-            let noexiste = prompt("Tu usuario no existe, quieres registrarte? (Responde si o no)");
-            if (noexiste === "si") {
-                login();
-            } else {
-                alert("Lo sentimos, no podemos continuar con tu compra, pero en cualquier momento puedes crear tu cuenta")
-            }
-        }   //close if user   
-    }  //close for 
-}//close function
+       // } else if (Number(BD.length)-1 === i){
+        //    let noexiste = prompt("Tu usuario no existe, quieres registrarte? (Responde si o no)");
+        //    if (noexiste === "si") {
+        //        login();
+        //    } else {
+        //        alert("Lo sentimos, no podemos continuar con tu compra, pero en cualquier momento puedes crear tu cuenta")
+        //    }
+    //    }   //close if user   
+//    }  //close for 
+//}//close function*/
 
 
 function compradeusuarionuevo(){
@@ -261,6 +263,9 @@ function compradeusuarionuevo(){
                 console.log("Tarjeta invalida, vuelve a intentarlo");
                 return;
                 }
+            } else {
+                alert("Tarjeta invalida, vuelve a intentarlo");
+                console.log("Tarjeta invalida, vuelve a intentarlo");
             }
         }  else if (Number(pago) == 3) {
             return;
@@ -384,6 +389,9 @@ function compradeusuariologueado(){
                         console.log("Tarjeta invalida, vuelve a intentarlo");
                         return;
                         }
+                    } else {
+                        alert("Tarjeta invalida, vuelve a intentarlo");
+                        console.log("Tarjeta invalida, vuelve a intentarlo");
                     }
                 }  else if (Number(pago) == 3) {
                     return;
@@ -395,8 +403,6 @@ function compradeusuariologueado(){
             console.log(productoyuser);*///close if user    //close for 
 }//close function
 
-
-
 document.body.onload = login()
 
 /*if (logged){
@@ -405,3 +411,6 @@ document.body.onload = login()
 } else {
     document.getElementById("lascompras").addEventListener("click", compra); //nodo
 }*/
+
+const contacto = document.getElementById("lname");
+console.log(contacto)

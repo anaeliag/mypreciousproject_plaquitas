@@ -1,0 +1,88 @@
+/*#carouselExampleInterval {
+    width: 719px;
+    background-color: aquamarine;
+}*/
+
+body {
+    /*background-color:lightpink;*/
+    /*width: 719px;*/
+    height: 100vh;
+    background-image: url(assets/images/fondo_rosa.jpg);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#navegacion{
+    display: flex;
+    height: 200px;
+    background-image: url(assets/images/image_main.jpg);
+}
+
+#navegacion > ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: stretch;
+
+}
+#navegacion > ul > li {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+#navegacion > ul > li:hover {
+    background-color: pink;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: palevioletred;
+    text-align: center;
+    border: plum 5px solid;
+    font-style: italic;
+    font-size: large;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    background: palevioletred;
+    text-align: center;
+    border: plum 5px solid;
+  }
+
+.grid-item1{
+    border-style: double;
+    border: plum 5px solid;
+}
+  
+.grid-item2{
+    border-style: double;
+    border: plum 5px solid;
+}
+.grid-item3{
+    border-style: double;
+    border: plum 5px solid;
+}
+.grid-item4{
+    border-style: double;
+    border: plum 5px solid;
+}
+
+.grid-item5{
+    border-style: double;
+    border: plum 5px solid;
+}
+
+form {
+    background: palevioletred;
+    border: plum 5px solid;
+}

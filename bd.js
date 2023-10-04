@@ -22,5 +22,11 @@ const BD = [
         contrasena: "user2",
         nombre: "Usuario 4",
         productos: []
+    },
+    {
+        email: "user4@gmail.com",
+        contrasena: "user2",
+        nombre: "Usuario 4",
+        productos: []
     }
 ]

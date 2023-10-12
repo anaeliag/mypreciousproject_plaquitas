@@ -1,41 +1,10 @@
-//document.getElementById("menuproductos").addEventListener("mouseover",necesitasayuda);
-
-// Get the modal
-/*var modal = document.getElementById('close_window');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}*/
-
-/*document.addEventListener(
-    "click",
-    function(event) {
-      // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-      if (
-        event.target.matches(".button-close-modal") ||
-        !event.target.closest(".modal")
-      ) {
-        closeModal()
-      }
-    },
-    false
-  )*/
-  
-  /*function closeModal() {
-    /*document.querySelector(".modal").style.display = "none"
-    document.querySelector(".modal").classList.remove('fade-in');*/
-    /*document.querySelector(".modal").hide*/
-    /*modal.hide();*/
-    /*const myModal = bootstrap.Modal(document.getElementById(".modal"));
-    myModal.hide();
-  }*/
-
-
+ 
 let user_email = "null" 
-function login() {
+//function login(useremail, usercontrasena, username) {
+    function login(usermasnewuser2, newUser2, usermasnewuser2) {
+        console.log(usermasnewuser2);
+        console.log(newUser2);
+        console.log(BD)
         const user_email = document.getElementById("floatingInput").value;
         console.log(user_email);
         const contrasena = document.getElementById("floatingPassword").value;
@@ -47,57 +16,95 @@ function login() {
                 //construyePerfil()
                 alert(document.getElementById("areaMensajes").innerText = "Bienvenido "+BD[i].nombre);
                 console.log("Bienvenida/o "+BD[i].nombre+", estaremos contentos de servirte");
-
+                removelogout()
                 /*document.getElementById("loginline").addEventListener("mouseup", closeModal);*/
                 //document.getElementById('loginline').addEventListener('mouseup',loginbutton)
             
             } else if (Number(BD.length)-1 === i){
                 console.log("usuario o contraseña incorrectas");
                 alert("usuario o contraseña incorrectas")
+                loginvisible();
             }
         }
     } 
 
-    /*function loginbutton() {
-         // hide button (still takes up space on page)
+
+function loginvisible() {
+    const loginbutton = document.getElementById('loginbutton');
+    loginbutton.style.visibility = 'visible';
+}
+
+function removelogout() {
+    const logoutbutton = document.getElementById('logoutbutton');
+    logoutbutton.style.visibility = 'hidden';
+    const form = document.getElementById('registro').style.display='none'
+}
+
+document.getElementById("logoutbutton").addEventListener("click", logout);
+
+function logout() {
+    window.location.href = "index.html";
+}
+
+document.getElementById("loginline").addEventListener("click", login);
+
+const loginbutton = document.getElementById('loginbutton');
+const savechanges = document.getElementById('loginline');
+
+savechanges.addEventListener('click', () => {
+// hide button (still takes up space on page)
+loginbutton.style.visibility = 'hidden';
+
+// show div
+const logoutbutton = document.getElementById('logoutbutton');
+logoutbutton.style.visibility = 'visible';
+});
+
+document.getElementById('registro').addEventListener("click", registrame);
+    function registrame() {
+        const useremail = document.getElementById('inputEmail4').value;
+        console.log(useremail);
+        const usercontrasena = document.getElementById('inputPassword4').value;
+        console.log(usercontrasena);
+        const usercontrasena2 = document.getElementById('inputPassword5').value;
+        console.log(usercontrasena);
+        const username = document.getElementById('specificSizeInputName').value;
+        console.log(username);
+        if (useremail && usercontrasena && username && usercontrasena2){
+
+            if (usercontrasena === usercontrasena2) {
+                // Successful registration
+                alert('Registro exitoso, ya estas logueado');
+                // Reset the form
+                document.getElementById('registro').reset();
+              } else {
+                // Passwords don't match
+                alert('Los passwords no hacen match');
+              }
+            //console.log("Bienvenido "+username)
+            const newUser2 = new Usuario(useremail, usercontrasena, username);
+            let usermasnewuser2 = BD.concat(newUser2);
+            console.log(usermasnewuser2)
+            alert(document.getElementById("areaMensajes").innerText = "Bienvenido "+username);
+            console.log("Bienvenida/o "+username+", estaremos contentos de servirte");
+            /*const logoutbutton = document.getElementById('logoutbutton');
+                logoutbutton.style.visibility = 'visible';
+            const loginbutton = document.getElementById('loginbutton');
+                loginbutton.style.visibility = 'hidden';*/
+        }
+    }
+
+
+    const savechangesform = document.getElementById('registro');
+
+    savechangesform.addEventListener('click', () => {
+    // hide button (still takes up space on page)
     loginbutton.style.visibility = 'hidden';
 
     // show div
     const logoutbutton = document.getElementById('logoutbutton');
     logoutbutton.style.visibility = 'visible';
-    }*/
-
-    function registrame() {
-        const user_email = document.getElementById("floatingInput").value;
-        console.log(user_email);
-        const contrasena = document.getElementById("floatingPassword").value;
-        console.log(contrasena);
-        const others = document.getElementsByClassName("form-floating mb-3").value;
-        console.log(others);
-            console.log("Bienvenido "+usuario)
-            const newUser = new Usuario(usuario, nombre, contrasena);
-            const usermasnewuser = BD.concat(newUser);
-            console.log(usermasnewuser)
-            alert(document.getElementById("areaMensajes").innerText = "Bienvenido "+usuario);
-            console.log("Bienvenida/o "+usuario+", estaremos contentos de servirte");
-            document.getElementById("lascompras").addEventListener("click", compradeusuarionuevo);
-    }
-
-        
-        //hidebutton();
-        //element.addEventListener("keyup", hidebutton);
-
-        const loginbutton = document.getElementById('loginbutton');
-        const savechanges = document.getElementById('loginline');
-
-        savechanges.addEventListener('click', () => {
-        // hide button (still takes up space on page)
-        loginbutton.style.visibility = 'hidden';
-
-        // show div
-        const logoutbutton = document.getElementById('logoutbutton');
-        logoutbutton.style.visibility = 'visible';
-        });
+    });
 
         
         const link = document.getElementById('linkregistro');
@@ -485,29 +492,5 @@ function compradeusuariologueado(){
 
 document.body.onload = removelogout()
 
-function removelogout() {
-    const logoutbutton = document.getElementById('logoutbutton');
-    logoutbutton.style.visibility = 'hidden';
-    const form = document.getElementById('registro').style.display='none'
-}
-
-document.getElementById("logoutbutton").addEventListener("click", logout);
-
-function logout() {
-    window.location.href = "index.html";
-}
-
-
-/*if (logged){
-    document.getElementById("lascompras").addEventListener("click", compradeusuariologueado(usuario)); //nodo
-    console.log("ya entre")
-} else {
-    document.getElementById("lascompras").addEventListener("click", compra); //nodo
-}*/
-
-document.getElementById("loginline").addEventListener("click", login);
-const button_login = document.getElementById("loginline")
-console.log(button_login)
-
-const contacto = document.getElementById("lname");
-console.log(contacto)
+/*const contacto = document.getElementById("lname");
+console.log(contacto)*/

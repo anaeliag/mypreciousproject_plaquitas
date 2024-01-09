@@ -1,0 +1,41 @@
+{
+  "name": "mypreciousproject_plaquitas_node",
+  "version": "1.0.0",
+  "description": "mi projecto plaquitas",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "preinstall": "cd public && rm -fr build && cd ..",
+    "build": "npm run preinstall && react-scripts build && mv build public/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "mypreciousproject_plaquitas_node"
+  },
+  "author": "djkat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.0",
+    "web-vitals": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
